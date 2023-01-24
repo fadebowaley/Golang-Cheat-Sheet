@@ -1,0 +1,11 @@
+To add a Go module as a dependency to your project, you can use the go mod command.
+
+First, navigate to the root directory of your Go project in your terminal.
+Run the command go mod init to initialize a new Go module in the current directory. This will create a new file called go.mod in your project's root directory.
+To add a dependency, use the go get command followed by the import path of the module you want to add. For example, to add the "github.com/gorilla/mux" module, you would run go get github.com/gorilla/mux
+Once you have added the dependency, you can use it in your code by importing it like any other Go package.
+run go mod tidy to automatically update the go.mod file with the new dependency and any other dependencies it may have.
+You can use go mod graph to see the dependencies of your project
+You can also specify a specific version of a dependency by adding the version number after the package name like this go get github.com/gorilla/mux@v1.6.2.
+
+Note that, once you have added a dependency, it is locked to a specific version, and further updates to that dependency will not be reflected in your project until you explicitly update it.
